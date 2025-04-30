@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Profile Card</title>
+  <title>Traditional Profile Card</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,24 +12,23 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, pink, #00b4d8);
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #fceabb, #f8b500);
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
     }
 
     .profile-card {
-      background-color: #ffffff;
-      border-radius: 15px;
+      background-color: #fff8e1;
+      border: 5px double #8b4513;
+      border-radius: 20px;
       width: 100%;
       max-width: 400px;
       text-align: center;
       padding: 30px 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     .profile-image {
@@ -37,14 +36,14 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #0077b6;
+      border: 4px solid #a0522d;
       margin-bottom: 15px;
     }
 
     .profile-name {
       font-size: 24px;
-      font-weight: 600;
-      color: #0077b6;
+      font-weight: bold;
+      color: #4e2600;
       margin-bottom: 8px;
       transition: color 0.3s ease;
       cursor: pointer;
@@ -52,56 +51,48 @@
 
     .bio {
       font-size: 15px;
-      color: #333;
+      color: #5c3d0b;
       margin-bottom: 15px;
     }
 
     .toggle-btn {
-      background-color: #0077b6;
+      background-color: #a0522d;
       color: #fff;
       border: none;
-      padding: 8px 15px;
+      padding: 8px 18px;
       border-radius: 20px;
       cursor: pointer;
       margin-bottom: 15px;
-      transition: background 0.3s ease;
+      font-weight: bold;
     }
 
     .toggle-btn:hover {
-      background-color: #023e8a;
+      background-color: #7b3411;
     }
 
     .hobbies {
       display: none;
       list-style: none;
       margin-bottom: 15px;
-      padding-left: 0;
     }
 
     .hobbies li {
       margin: 5px 0;
-      color: #0077b6;
+      color: #6b2e00;
     }
 
     .social-links a {
       text-decoration: none;
       color: #fff;
-      background-color: #00b4d8;
+      background-color: #a0522d;
       padding: 8px 12px;
       margin: 0 5px;
-      border-radius: 50px;
+      border-radius: 20px;
       display: inline-block;
-      transition: background 0.3s ease;
     }
 
     .social-links a:hover {
-      background-color: #0077b6;
-    }
-
-    @media (max-width: 480px) {
-      .profile-card {
-        padding: 20px 10px;
-      }
+      background-color: #5c2c06;
     }
   </style>
 </head>
@@ -109,14 +100,14 @@
   <div class="profile-card">
     <img src="img.jpg" alt="Profile Image" class="profile-image" />
     <div class="profile-name" id="name">KEERTHIKA BADRI</div>
-    <p class="bio">Aspiring web developer passionate about building responsive interfaces.</p>
+    <p class="bio">Traditional coder with modern dreams 🌿</p>
 
     <button class="toggle-btn" onclick="toggleHobbies()">Hobbies</button>
 
     <ul class="hobbies" id="hobbyList">
       <li>Coding</li>
-      <li>Reading</li>
-      <li>Traveling</li>
+      <li>Reading Scriptures</li>
+      <li>Village Travel</li>
     </ul>
 
     <div class="social-links">
@@ -133,11 +124,10 @@
 
     const nameElement = document.getElementById('name');
     nameElement.addEventListener('mouseover', () => {
-      nameElement.style.color = '#ff6f61';
+      nameElement.style.color = '#d2691e';
     });
-
     nameElement.addEventListener('mouseout', () => {
-      nameElement.style.color = '#0077b6';
+      nameElement.style.color = '#4e2600';
     });
   </script>
 </body>
